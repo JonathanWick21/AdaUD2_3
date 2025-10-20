@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="log4j-slf4j2-impl-2.25.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Baixades/recursos examen-20251013/log4j-slf4j2-impl-2.25.2.jar!/" />
+      <root url="jar://$USER_HOME$/Baixades/recursos examen-20251013/HikariCP-7.0.2.jar!/" />
+      <root url="jar://$USER_HOME$/Baixades/recursos examen-20251013/log4j-api-2.25.2.jar!/" />
+      <root url="jar://$USER_HOME$/Baixades/recursos examen-20251013/log4j-core-2.25.2.jar!/" />
+      <root url="jar://$USER_HOME$/Baixades/recursos examen-20251013/mysql-connector-j-9.4.0.jar!/" />
+      <root url="jar://$USER_HOME$/Baixades/recursos examen-20251013/slf4j-api-2.0.17.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
