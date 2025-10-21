@@ -34,4 +34,28 @@ public class AuditoriaDao {
             }
         }
     }
+
+    public void insertarAuditoriasSinCommit(Auditoria[] auditorias){
+        String query = "INSERT INTO auditoria (evento, detalle) values (?,?)";
+
+
+        try (Connection con = ds.getConnection()){
+            con.setAutoCommit(false);
+            for (Auditoria auditoria: auditorias){
+                try(PreparedStatement ps = con.prepareStatement(query)){
+                    ps.setString(1, auditoria.getEvento());
+                    ps.setString(2, auditoria.getDetalle());
+                    ps.executeUpdate();
+                    System.out.println("Se ha insertado la auditoria: " + auditoria.getId() + " con exito");
+                } catch (SQLException e) {
+                    con.rollback();
+                    System.err.println("Ha habido un error transicción cancelada");
+                } finally {
+                    con.setAutoCommit(true);
+                }
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
